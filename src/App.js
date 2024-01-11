@@ -27,7 +27,6 @@ function App() {
           path="/"
           element={status==="true" ? <Navigate to="/dashboard" /> : <Navigate to="/login" />}
         /> 
-        
         <Route path='/dashboard' element={<PrivateRouter><DashBoard/></PrivateRouter>} />
         <Route path='/product' element={<PrivateRouter><ProductsPage/></PrivateRouter>}/>
         <Route path='/account' element={<PrivateRouter><AccountPage/></PrivateRouter>}/>

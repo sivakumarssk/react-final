@@ -20,19 +20,21 @@ const orders=storedApiData?.dasbhoardPage?.orders ||[]
         <div className='con'><h2>Storage Information</h2><PieChart  /></div>
         <div className='con'>
           <h2>Notification List</h2>
-        
+          <div className='overflow'>
           {
             notifications.map((eachNotification,index)=>{
               const {pic,message,time}=eachNotification;
               return(
-                <div key={index} className='noti1'>
+                <div className='table'>
+                <div key={index} className={`noti1 class${index}`}>
                   <div className='imgdiv'><img src={pic} alt="userpic"  className='notificationImage'/></div>
                   <div><p>{message}</p>
-                  <div>{time} ago.</div></div>
+                  <div style={{color:"#bdcbd8",marginTop:"10px"}}>{time} ago.</div></div></div>
                 </div>
               )
             })
           }
+          </div>
         </div>
         </div>
         <div className='tablediv'>
